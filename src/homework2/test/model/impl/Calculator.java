@@ -23,18 +23,21 @@ public class Calculator implements Calculable{
 
     @Override
     public Calculable multiply(double arg) {
+        logger.log(String.format("Вычисляется произведение чисел: %f и %f", primaryArg, arg));
         primaryArg*=arg;
         return this;
     }
 
     @Override
     public Calculable divide(double arg) {
+        logger.log(String.format("Вычисляется деление чисел: %f и %f", primaryArg, arg));
         primaryArg/=arg;
         return this;
     }
 
     @Override
     public double getResult() {
+        logger.log(String.format("Результат = %f", primaryArg));
         return primaryArg;
     }
 }
